@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+	<view>
+		<topSearch/>
+	</view>
+	<view class="banner">
+		<banner banners="{{banners}}" />
+	</view>
+	<!-- 推荐歌单 -->
+	<view>
+		<recommend
+		 recommend="{{recommendList}}"
+		 playmodel="{{0}}"
+		 title="推荐歌单"
+		 more="歌单广场"
+		/>
+	</view>
+	<!-- 新碟新歌 -->
+	<view>
+		<recommend
+		 recommend="{{newAlbum}}"
+		 newMusic="{{newsong}}"
+		 playmodel="{{1}}"
+		 title="新碟"
+		 title2="新歌"
+		 more="更多新碟"
+		 more2="更多新歌"
+		/>
+	</view>
+	<!-- 推荐电台 -->
+	<view>
+		<recommend recommend="{{Djprogram}}" title="推荐电台" more="电台广场" />
+	</view>
+
+	<!-- 推荐节目 -->
+	<view>
+		<recommend recommend="{{Program}}" title="推荐节目" more="更多节目" />
+	</view>
+
+</view>
+

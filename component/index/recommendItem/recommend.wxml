@@ -1,0 +1,86 @@
+<wxs module="filter" src="../../../assets/filter.wxs" />
+<view class="wrap">
+	<view class="wrap-top flex j-between a-center">
+		<view class="title flex">
+			<view class="title-left {{selectIndex===0 ? 'select' : ''}}" bind:tap="clickItem" data-index="{{0}}">
+				{{title}}
+			</view>
+
+			<view
+			 wx:if="{{title2}}"
+			 class="title-right {{selectIndex===1 ? 'select' : ''}}"
+			 bind:tap="clickItem"
+			 data-index="{{1}}"
+			>
+				{{title2}}
+			</view>
+
+		</view>
+		<view class="more" wx:if="{{selectIndex===0}}">
+			{{more}}
+		</view>
+		<view class="more" wx:if="{{selectIndex===1}}">
+			{{more2}}
+		</view>
+	</view>
+	<view wx:if="{{selectIndex===0}}" class="wrap-bottom flex f-wrap">
+		<view class="imageItem" wx:for="{{recommend}}" wx:key="index">
+			<view class="images" wx:if="{{item.picUrl}}">
+				<image class="img" src="{{item.picUrl}}" mode="widthFix" />
+			</view>
+			<view class="images" wx:if="{{item.blurCoverUrl}}">
+				<image class="img" src="{{item.blurCoverUrl}}" mode="widthFix" />
+			</view>
+			<view class="name">
+				{{item.name}}
+			</view>
+			<view wx:if="{{playmodel===0}}" class="playNum flex a-center">
+				<image
+				 class="playImg"
+				 src="../../../assets/images/play.svg"
+				 mode="widthFix"
+				 lazy-load="false"
+				 binderror=""
+				 bindload=""
+				/>
+				{{filter.numberVonversion(item.playCount)}}
+			</view>
+			<view wx:if="{{playmodel===1}}" class="playNum2">
+				<image
+				 class="playImg"
+				 src="../../../assets/images/play.svg"
+				 mode="widthFix"
+				 lazy-load="false"
+				 binderror=""
+				 bindload=""
+				/>
+
+			</view>
+			<view wx:if="{{playmodel===2}}" class="playNum2">
+				<image
+				 class="playImg"
+				 src="../../../assets/images/play2.svg"
+				 mode="widthFix"
+				 lazy-load="false"
+				 binderror=""
+				 bindload=""
+				/>
+
+			</view>
+
+		</view>
+	</view>
+	<view wx:if="{{selectIndex===1}}" class="wrap-bottom flex f-wrap">
+		<view class="imageItem" wx:for="{{newMusic}}" wx:key="index">
+			<view class="images">
+				<image class="img" src="{{item.picUrl}}" mode="widthFix" />
+			</view>
+			<view class="name">
+				{{item.name}}
+			</view>
+
+		</view>
+	</view>
+
+</view>
+

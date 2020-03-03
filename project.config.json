@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.1",
+	"appid": "wx990746abe2519c12",
+	"projectname": "music",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/singer/singer",
+					"pathName": "pages/singer/singer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/singerDetail/singerDetail",
+					"pathName": "pages/singerDetail/singerDetail",
+					"query": "title=歌手&Item=%7B%22img1v1Id%22%3A603631883675241%2C%22topicPerson%22%3A0%2C%22alias%22%3A%5B%22aMEI%22%2C%22%E9%98%BF%E5%AF%86%E7%89%B9%22%5D%2C%22picId%22%3A678398674363509%2C%22briefDesc%22%3A%22%22%2C%22musicSize%22%3A747%2C%22albumSize%22%3A38%2C%22followed%22%3Afalse%2C%22img1v1Url%22%3A%22https%3A%2F%2Fp2.music.126.net%2FF9asgcj7C7qSl_je9XDvRw%3D%3D%2F603631883675241.jpg%22%2C%22trans%22%3A%22%22%2C%22picUrl%22%3A%22https%3A%2F%2Fp2.music.126.net%2F-JxOlVRUl3OFqNkCIu9dlw%3D%3D%2F678398674363509.jpg%22%2C%22name%22%3A%22%E5%BC%A0%E6%83%A0%E5%A6%B9%22%2C%22id%22%3A10559%2C%22accountId%22%3A29879272%7D",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/singerDetail/singerDetail",
+					"pathName": "pages/singerDetail/singerDetail",
+					"query": "title=歌手&SingerId=10559",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "title=我的",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

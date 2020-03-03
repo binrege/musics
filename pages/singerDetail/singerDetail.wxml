@@ -1,0 +1,290 @@
+<view class="wrap">
+	<scroll-view
+	 scroll-y="true"
+	 style="height:100vh;"
+	 bindscrolltoupper="upper"
+	 bindscrolltolower="lower"
+	 bindscroll="scroll"
+	 scroll-top="{{scrollTop}}"
+	>
+		<view class="top">
+			<image
+			 class="imags"
+			 src="{{singerItem.picUrl}}"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+			<view class="bottom">
+				<view class="des flex j-between a-center">
+					<view class="left flex f-col j-between">
+						<view>
+							{{singerItem.name}}
+						</view>
+						<view>
+							粉丝
+						</view>
+
+					</view>
+
+					<view class="right flex">
+						<view class="follow flex j-around a-center">
+							<view>
+								+
+							</view>
+							<view>
+								关注
+							</view>
+
+						</view>
+						<view class="msg flex j-around a-center">
+							<image
+							 class="img"
+							 src="../../assets/images/info.svg"
+							 mode="widthFix"
+							 lazy-load="false"
+							 binderror=""
+							 bindload=""
+							/>
+							<view>
+								发私信
+							</view>
+
+						</view>
+
+					</view>
+
+				</view>
+				<view class="bar flex j-around a-center {{scrolltop>=268 ? 'fixed-top':''}}">
+					<view
+					 wx:for="{{bar}}"
+					 class="bar-item {{currentSelect===index ? 'clickItem':''}}"
+					 bind:tap="clickItem"
+					 data-index="{{index}}"
+					 wx:key="index"
+					>
+						{{item}}
+					</view>
+					<view wx:if="{{index===3}}">
+						111
+					</view>
+
+					<view wx:if="{{index===4}}">
+						111
+					</view>
+
+				</view>
+
+			</view>
+
+		</view>
+		<view wx:if="{{hotSongs}}" class="content">
+			<view wx:if="{{currentSelect===0}}">
+				<view class="flex a-center">
+					<image
+					 class="playImg"
+					 src="../../assets/images/radiusplay.svg"
+					 mode="widthFix"
+					 lazy-load="false"
+					/>
+					<view>
+						播放全部 {{hotSongs.length}}
+					</view>
+
+				</view>
+				<view
+				 wx:if="{{index<=5}}"
+				 class="flex j-around a-center music-item"
+				 wx:for="{{hotSongs}}"
+				 wx:key="index"
+				>
+					<view class="item-left">
+						{{index+1}}
+					</view>
+					<view class="item-middle">
+						<view class="tile">
+							{{item.name}}
+						</view>
+						<view class="singer">
+							{{item.name}}-{{item.al.name}}
+
+						</view>
+
+					</view>
+					<view class="item-right flex j-end">
+						<image
+						 class="musicplay2"
+						 src="../../assets/images/playmusic.svg"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+						<image
+						 class="musicplay2"
+						 src="../../assets/images/menus.svg"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+
+					</view>
+
+				</view>
+				<view class="flex j-center a-center more">
+					更多热歌 >
+				</view>
+				<view class="introduce">
+
+					<view class="titles">
+						歌手简介
+					</view>
+					<view class="nickName">
+						昵称:{{artist.name}}
+					</view>
+					<view class="jiajie">
+						简介:{{artist.briefDesc}}
+					</view>
+
+				</view>
+
+			</view>
+			<view wx:if="{{currentSelect===1}}">
+				<view class="flex j-around a-center music-item" wx:for="{{hotSongs}}" wx:key="index">
+					<view class="item-left">
+						{{index+1}}
+					</view>
+					<view class="item-middle">
+						<view class="tile">
+							{{item.name}}
+						</view>
+						<view class="singer">
+							{{item.name}}-{{item.al.name}}
+
+						</view>
+
+					</view>
+					<view class="item-right flex j-end">
+						<image
+						 class="musicplay2"
+						 src="../../assets/images/playmusic.svg"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+						<image
+						 class="musicplay2"
+						 src="../../assets/images/menus.svg"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+
+					</view>
+
+				</view>
+				<view class="flex j-center a-center more">
+					全部歌曲 >
+				</view>
+			</view>
+			<view wx:if="{{currentSelect===2}}" class="ablum">
+				<view class="flex j-between a-center ablum-top">
+					<view class="sorttype">
+						按发行顺序排序
+					</view>
+					<view class="flex j-between a-center">
+						<image
+						 class="sort-img"
+						 src="../../assets/images/sort.svg"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+						<view>
+							排序
+						</view>
+
+					</view>
+
+				</view>
+
+				<view wx:for="{{hotAlbums}}" wx:key="index" class="ablum-item flex a-center">
+					<view class="Albums-img">
+						<image
+						 class="ablum-img"
+						 src="{{item.blurPicUrl}}"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+
+					</view>
+					<view class="detail flex f-col j-around">
+						<view>
+							{{item.name}}
+						</view>
+						<view>
+							{{item.publishTime}} 歌曲{{item.size}}
+						</view>
+
+					</view>
+
+				</view>
+
+			</view>
+			<view wx:if="{{currentSelect===3}}">
+				<view class="flex j-between a-center">
+					<view>
+						全部
+					</view>
+					<view class="flex j-around a-center">
+						<view class="alls">
+							全部
+						</view>
+
+						<view class="line">
+							|
+						</view>
+
+						<view class="mv">
+							MV
+						</view>
+					</view>
+
+				</view>
+				<view wx:for="{{MV}}" wx:key="index" class="mvItem flex  a-center">
+					<view>
+						<image
+						 class="mv-img"
+						 src="{{item.imgurl}}"
+						 mode="widthFix"
+						 lazy-load="false"
+						 binderror=""
+						 bindload=""
+						/>
+					</view>
+					<view class="mv-right flex  f-col j-around">
+						<view>
+							{{item.name}}
+						</view>
+						<view class="publishTime">
+							{{item.publishTime}}
+						</view>
+
+					</view>
+
+				</view>
+
+			</view>
+
+		</view>
+
+	</scroll-view>
+</view>
+

@@ -1,0 +1,10 @@
+<view class="noLogin flex f-col a-center j-center">
+	<view class="tip">
+		你还没有登录哦
+	</view>
+	<view>
+		<button class="loginBtn" bind:tap="toLogin">立即登录</button>
+	</view>
+
+</view>
+

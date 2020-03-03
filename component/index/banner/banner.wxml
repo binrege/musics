@@ -1,0 +1,102 @@
+<view class="wrap">
+	<!-- 轮播图组件 -->
+	<swiper
+	 class="swiper"
+	 indicator-dots="{{true}}"
+	 autoplay="{{true}}"
+	 circular="{{true}}"
+	 interval="{{2000}}"
+	 duration="{{500}}"
+	>
+		<!-- block类似于template标签，用来包裹其他标签，不会再页面上生成任何实际标签 -->
+		<block>
+			<swiper-item wx:for="{{banners}}" wx:key="index" class="item">
+				<image class="swiper-image" src="{{item.imageUrl}}" mode="widthFix" />
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<view class="nav">
+	<view class="items">
+		<view class="images">
+			<image
+			 class="item-img"
+			 src="../../../assets/images/recommend.svg"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+		</view>
+		<view class="txt">
+			每日推荐
+		</view>
+
+	</view>
+	<view class="items">
+		<view class="images">
+			<image
+			 class="item-img"
+			 src="../../../assets/images/musicList.svg"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+		</view>
+		<view class="txt">
+			歌单
+		</view>
+
+	</view>
+	<view class="items">
+		<view class="images">
+			<image
+			 class="item-img"
+			 src="../../../assets/images/ranking.svg"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+		</view>
+		<view class="txt">
+			排行榜
+		</view>
+
+	</view>
+	<view class="items">
+		<view class="images">
+			<image
+			 class="item-img"
+			 src="../../../assets/images/radio.svg"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+		</view>
+		<view class="txt">
+			电台
+		</view>
+
+	</view>
+	<view class="items">
+		<view class="images">
+			<image
+			 class="item-img"
+			 src="../../../assets/images/live.svg"
+			 mode="widthFix"
+			 lazy-load="false"
+			 binderror=""
+			 bindload=""
+			/>
+		</view>
+		<view class="txt">
+			直播
+		</view>
+
+	</view>
+
+</view>
+

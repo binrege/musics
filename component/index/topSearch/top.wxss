@@ -1,0 +1,22 @@
+.top {
+    width: 100%;
+    padding: 0 20rpx;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 40rpx;
+    width: 16%;
+}
+
+.music {
+    width: 18%;
+}
+
+.img {
+    width: 80rpx;
+}

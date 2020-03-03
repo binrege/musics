@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "topSearch": "../../component/index/topSearch/top",
+        "banner": "../../component/index/banner/banner",
+        "recommend": "../../component/index/recommendItem/recommend"
+    }
+}

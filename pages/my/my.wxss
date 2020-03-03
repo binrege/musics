@@ -1,0 +1,15 @@
+/* pages/my/my.wxss */
+
+.noLogin {
+    height: 100vh;
+}
+
+.tip {
+    margin-bottom: 20rpx;
+}
+
+.loginBtn {
+    width: 250rpx !important;
+    background: rgb(56, 56, 245);
+    color: white;
+}

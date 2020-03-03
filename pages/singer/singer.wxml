@@ -1,0 +1,53 @@
+<view>
+	<van-tabs bind:click="clickItem">
+		<van-tab
+		 wx:for="{{singerType}}"
+		 title="{{item.name}}"
+		 name="item.id"
+		 wx:key="index"
+		>
+			<scroll-view
+			 class="scroll-view_H"
+			 scroll-x="true"
+			 bindscroll="scroll"
+			 style="width: 100%"
+			>
+				<view class="flex words" wx:if="{{item.id!==5001}}">
+					<view
+					 class="{{selectWord===indexs ? 'selectword':'wordss'}}"
+					 wx:for="{{word}}"
+					 wx:for-item="items"
+					 wx:for-index="indexs"
+					 wx:key="indexs"
+					 bind:tap="selectWord"
+					 data-indexs="{{indexs}}"
+					 data-items="{{items}}"
+					>
+						{{items}}
+					</view>
+				</view>
+			</scroll-view>
+			<view class="containt">
+				<view
+				 class="item flex a-center"
+				 data-item="{{item}}"
+				 bind:tap="ToDetail"
+				 wx:for="{{showSinger}}"
+				 wx:key="index"
+				>
+					<view class="images">
+						<image class="imgs" src="{{item.img1v1Url}}" mode="widthFix" />
+
+					</view>
+					<view class="name">
+						{{item.name}}
+					</view>
+				</view>
+
+			</view>
+
+		</van-tab>
+
+	</van-tabs>
+</view>
+

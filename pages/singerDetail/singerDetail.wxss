@@ -1,0 +1,234 @@
+/* pages/singerDetail/singerDetail.wxss */
+
+.imags {
+    width: 100%;
+}
+
+.wrap {
+    height: 100vh;
+    /* background-color: cadetblue; */
+    font-size: 28rpx;
+    color: white;
+}
+
+.top {
+    position: relative;
+}
+
+.bottom {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.img {
+    width: 30rpx;
+}
+
+.des {
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    height: 100rpx;
+    width: 100%;
+}
+
+.left {
+    height: 100%;
+}
+
+.right>view {
+    width: 120rpx;
+}
+
+.follow {
+    border-radius: 40rpx;
+    margin-right: 20rpx;
+    background: red;
+    height: 60rpx;
+}
+
+.follow>view:first-child {
+    font-size: 48rpx !important;
+    margin-bottom: 10rpx;
+}
+
+.msg {
+    width: 140rpx !important;
+    border-radius: 40rpx;
+    margin-right: 20rpx;
+    background: #ccc;
+    height: 60rpx;
+}
+
+.bar {
+    position: relative;
+    border-top-left-radius: 40rpx;
+    border-top-right-radius: 40rpx;
+    width: 100%;
+    background: white;
+    height: 80rpx;
+    color: black !important;
+    border-bottom: 1rpx solid #666;
+}
+
+.bar>view {
+    line-height: 80rpx;
+    height: 100%;
+    border-bottom: 4rpx solid transparent;
+}
+
+.clickItem {
+    border-bottom: 4rpx solid red !important;
+}
+
+.content {
+    /* height: 3000rpx; */
+    /* background-color: red; */
+    padding: 10rpx 40rpx;
+    font-size: 28rpx;
+    color: black;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0 !important;
+}
+
+
+/*  0*/
+
+.playImg {
+    width: 35rpx;
+    margin-right: 20rpx;
+}
+
+.musicplay2 {
+    width: 40rpx;
+}
+
+.singer {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.item-left {
+    flex: 1
+}
+
+.item-middle {
+    flex: 7
+}
+
+.item-right {
+    flex: 2
+}
+
+.music-item {
+    margin: 30rpx 10rpx;
+}
+
+.tile {
+    font-size: 32rpx;
+    font-weight: 700;
+    margin-bottom: 15rpx;
+}
+
+.tile,
+.singer {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.more {
+    font-size: 28rpx;
+    font-weight: 700;
+    margin: 20rpx 0;
+}
+
+.jiajie {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+.titles {
+    font-size: 32rpx;
+    font-weight: 800;
+    margin-bottom: 20rpx;
+}
+
+.nickName {
+    margin: 10rpx 0;
+    font-size: 32rpx;
+    font-weight: 500;
+}
+
+
+/* 专辑 */
+
+.sort-img {
+    width: 40rpx;
+    margin-right: 10rpx;
+}
+
+.ablum {
+    padding: 10rpx 10rpx;
+}
+
+.sorttype {
+    font-size: 28rpx;
+    font-weight: 700;
+}
+
+.ablum-img {
+    width: 150rpx;
+}
+
+.Albums-img {
+    margin-right: 20rpx;
+}
+
+.ablum-item {
+    margin: 20rpx 0;
+}
+
+.detail {
+    height: 160rpx;
+}
+
+
+/* 视频 */
+
+.mv-img {
+    width: 170rpx;
+    border-radius: 20rpx;
+}
+
+.mvItem {
+    margin: 10rpx 0;
+}
+
+.mv-right {
+    height: 170rpx;
+    margin-left: 20rpx;
+}
+
+.publishTime {
+    font-size: 24rpx;
+    color: #666;
+}

@@ -1,0 +1,47 @@
+.wordss {
+    /* width: 80rpx !important; */
+    margin: 0 10rpx;
+    height: 60rpx;
+    padding: 0 15rpx;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.words {
+    width: 100%;
+    padding: 10rpx 20rpx;
+    font-size: 28rpx;
+}
+
+.selectword {
+    width: 80rpx;
+    height: 60rpx;
+    margin: 0 10rpx;
+    padding: 0 15rpx;
+    text-align: center;
+    line-height: 60rpx;
+    background: red;
+    color: white;
+    font-size: 32rpx;
+}
+
+.item {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    padding-left: 40rpx;
+    width: 100%;
+}
+
+.imgs {
+    width: 150rpx;
+    border-radius: 75rpx;
+}
+
+.images {
+    margin-right: 30rpx;
+}
+
+.name {
+    font-size: 32rpx;
+}

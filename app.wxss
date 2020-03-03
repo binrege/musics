@@ -1,0 +1,47 @@
+.flex {
+    display: flex !important;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.f-wrap {
+    flex-wrap: wrap!important;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-between {
+    justify-content: space-between;
+}
+
+.j-around {
+    justify-content: space-around;
+}
+
+.f-1 {
+    flex: 1
+}
+
+.contain {
+    height: 60rpx;
+}
+
+
+/* 横向滚动 */
+
+.scroll-view_H {
+    white-space: nowrap;
+    display: inline-block;
+}
